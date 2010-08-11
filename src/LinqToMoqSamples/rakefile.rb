@@ -9,8 +9,8 @@ MSBUILD_VERBOSITY_LEVEL = ENV["verbosity"] || "quiet"
 PROJECT_PATH = ENV["ProjectPath"].gsub('\\', '/')
 
 CURRENT_PATH = File.dirname(__FILE__)
-TOOLS_PATH = File.join("../", "tools")
-TEST_SUFFIX = "Specs"
+TOOLS_PATH = File.join("../../", "tools")
+TEST_SUFFIX = "MoqSamples"
 
 output_silent = true
 
@@ -23,7 +23,7 @@ task :build do
 end
 
 task :run_specs do
-  spec_dlls = Dir.glob(File.join(PROJECT_PATH, "/bin/#{CONFIG}/*Specs.dll"))
+  spec_dlls = Dir.glob(File.join(PROJECT_PATH, "/bin/#{CONFIG}/*#{TEST_SUFFIX}.dll"))
   
 	test_runner_exe = File.join(TOOLS_PATH, "mspec", "mspec.exe")
 

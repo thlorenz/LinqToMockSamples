@@ -3,6 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToMoqSamples", "LinqToMoqSamples\LinqToMoqSamples.csproj", "{F65CBC5E-6C74-4032-8627-D17D32AB98DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{451380CE-079A-41EA-B611-739861D28E50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSpec", "MSpec", "{2F6941B7-C4D6-462F-8F1C-10DF645F49CB}"
+	ProjectSection(SolutionItems) = preProject
+		..\Lib\MSpec\Machine.Specifications.dll = ..\Lib\MSpec\Machine.Specifications.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Moq", "Moq", "{57E62F90-B44D-4EC3-AAA9-3E55D1C5ACC8}"
+	ProjectSection(SolutionItems) = preProject
+		..\Lib\Moq\Castle.Core.dll = ..\Lib\Moq\Castle.Core.dll
+		..\Lib\Moq\Castle.Core.xml = ..\Lib\Moq\Castle.Core.xml
+		..\Lib\Moq\Moq.dll = ..\Lib\Moq\Moq.dll
+		..\Lib\Moq\Moq.xml = ..\Lib\Moq\Moq.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,5 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F6941B7-C4D6-462F-8F1C-10DF645F49CB} = {451380CE-079A-41EA-B611-739861D28E50}
+		{57E62F90-B44D-4EC3-AAA9-3E55D1C5ACC8} = {451380CE-079A-41EA-B611-739861D28E50}
 	EndGlobalSection
 EndGlobal
